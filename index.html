@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice to Text Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="top-bar">
+      <h1>🎙️ Voice to Text</h1>
+      <button id="themeToggle">🌙</button>
+    </header>
+
+    <!-- Microphone Permission -->
+    <div class="mic-permission">
+      <button id="micPermissionBtn">🎤 Allow Microphone</button>
+      <p id="micStatus">Microphone permission not granted</p>
+    </div>
+
+    <!-- Recording Status -->
+    <div class="recording-status">
+      <span id="indicator"></span>
+      <span id="statusText">Not Recording</span>
+    </div>
+
+    <!-- Waveform -->
+    <div class="waveform" id="waveform">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+
+    <!-- Language -->
+    <label class="label">Language</label>
+    <select id="language">
+      <option value="en-US">English (US)</option>
+      <option value="en-IN">English (India)</option>
+      <option value="hi-IN">Hindi</option>
+      <option value="fr-FR">French</option>
+      <option value="de-DE">German</option>
+      <option value="es-ES">Spanish</option>
+    </select>
+
+    <!-- Output -->
+    <label class="label">Converted Text</label>
+    <textarea id="output" placeholder="Click Start and speak..."></textarea>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button class="btn start" id="start">▶ Start</button>
+      <button class="btn stop" id="stop">⏹ Stop</button>
+      <button class="btn clear" id="clear">🧹 Clear</button>
+      <button class="btn download" id="download">⬇ Download</button>
+    </div>
+
+    <p class="hint">
+      ⚠️ Allow microphone permission<br>
+      ✅ Works best in Google Chrome
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
